@@ -4,14 +4,14 @@ project(laboratorioTp1_7Sem)
 # 1) Onde estão os headres
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(include)
-# 2) Adiciona todos os .cpp
-file(GLOB SOURCES
-        src/*.cpp
-        src/dominios/*.cpp
-
+include_directories(
+        include
+        include/dominios
 )
 
 # 3) Gerar o executavel
-add_executable(laboratorioTp1_7Sem ${SOURCES}
+add_executable(laboratorioTp1_7Sem
+        src/main.cpp
+
+        #dominios
         src/dominios/dominios.cpp)
